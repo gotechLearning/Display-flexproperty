@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display flex-direction</title>
+    <style>
+        .container{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            border: 5px solid yellow;
+        }
+        .container >*{
+            flex-basis: 500px;
+        }
+        .red{background-color: red;}
+        .orange{background-color: orange;}
+        .yellow{background-color: yellow;}
+        .green{background-color: green;} 
+        .blue{background-color: blue;}
+        .indigo{background-color: indigo;}
+        .violet{background-color: violet;}   
+        table{
+            border: 1px solid black;
+            margin:4% 2%;
+            display: inline-block;
+        }    
+        td{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        td:nth-child(even){
+            background-image: linear-gradient(60deg, pink, skyblue);
+        }
+        td:nth-child(odd){
+            background-image: linear-gradient(120deg, green, yellow);
+        }
+        td:nth-child(even){
+            background-image: linear-gradient(90deg, purple,orange);
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="red"><p>Red</p>
+            <table>
+                <tr>
+                    <td colspan="3"></td>
+                     <!-- <td></td>
+                    <td></td> -->
+                    <td rowspan="4"></td> 
+                </tr>
+                <tr>
+                    <td rowspan="4"></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td ></td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <!-- <td ></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+            </table>
+                <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" rowspan="2"></td>
+                    <td></td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td colspan="2"></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <!-- <td></td> -->
+                    <td colspan="2" rowspan="3"></td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <!-- <td></td> -->
+                    <!-- <td></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td>
+                    <td></td> -->
+                </tr>
+            </table>
+        </div>
+        <div class="orange">Orange</div>
+        <div class="yellow">Yellow</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="indigo">Indigo</div>
+        <div class="violet">violet</div>
+    </div>
+</body>
+</html>
